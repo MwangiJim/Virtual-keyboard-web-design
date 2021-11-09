@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.keyboard{
+    background: #000;
+    top: 60%;
+    left: 10%;
+    transform: translateY(-50%);
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(13,74px);
+    padding: 20px 12px;
+    animation: colors 20s linear infinite;
+}
+/* @keyframes colors{
+    0%{
+        background-color: #000;
+    }
+    5%{
+        background-color: #f44336;
+    }
+    10%{
+        background-color: forestgreen;
+    }
+    20%{
+        background-color: blue;
+    }
+    50%{
+        background-color: brown;
+    }
+} */
+#OutputScreen{
+    grid-column: span 13;
+    width: 940px;
+    height: 150px;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    font-size: 34px;
+    font-weight: 600;
+    outline: none;
+    border-radius:20px 20px 0 0;
+    border: none;
+    padding: 0 20px;
+    text-align: start;
+    box-shadow: inset -5px -5px -12px #ffffff,
+                 5px 5px 12px rgba(0,0,0,0.7);
+}
+.keyboard button{
+    height: 57px;
+    width: 70px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 19px;
+    background: #333;
+    margin: 3px 5px;
+    outline: none;
+    border: none;
+}
+.keyboard button:hover{
+    background-color: rgb(77, 72, 72);
+    box-shadow: 5px 5px 12px rgb(255, 255, 255);
+}
+#CalculateBtn,#BackspaceBtn{
+    grid-column: span 2;
+    width: 141px;
+}
+#Capslock{
+    width: 100px;
+    grid-column: span 1;
+    font-size: 16px;
+    padding-right: 5px;
+}
+#SpaceBtn{
+    grid-column: span 8;
+    width: 585px;
+}
+.pictures{
+    display: flex;
+    bottom: 0px;
+    left: 20%;
+    position: absolute;
+}
+.pictures img{
+    width: 100px;
+    height: 80px;
+    opacity: 0.3;
+    margin: 0 10px;
+}
+.pictures .active{
+    opacity: 1;
+    border: 3px solid #fff;
+    height: 100px;
+    width: 120px;
+}
+#prev{
+    transform: rotate(180deg);
+    bottom: 50%;
+    left: 5%;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+#next{
+    bottom: 50%;
+    left: 85%;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
